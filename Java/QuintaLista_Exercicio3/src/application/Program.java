@@ -23,8 +23,9 @@ public class Program {
 		String pessoa = "Uma pessoa é um ser vivo que tem nome, idade, sexo, altura, peso , e pode  dormindo, acordada, se alimentando, pensar, andar, descansar";
 		String casa ="Casa é um edifício de tamanho e formas variadas, tendo quantidade de comodos, tamanho, pessoas que residem, cor, tipo, e ";
 		
-		String   relacionamento ="O relacionamento entre uma pessoa em um carro é de que uma pessoa possui ou nao um ou varios carros;\ne dentro de um carro pode ter nenhuma ou varias pessoas dentro dele;\numa pode ter nenhuma ou varias casas; em uma casa pode ter nenhuma ou varias pessoas";
-		
+		String   relacionamento ="O relacionamento entre uma pessoa em um carro é de que uma pessoa possui ou não um ou vários carros;\r\n" + 
+				"e dentro de um carro pode ter nenhuma ou várias pessoas dentro dele;\r\n" + 
+				"uma pessoa pode ter nenhuma ou várias casas; em uma casa pode ter nenhuma ou varias pessoas.\r\n";
 		
 		System.out.println("\nAutomovel: "+automovel);
 		System.out.println("\nPessoa: "+pessoa);
