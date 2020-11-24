@@ -3,6 +3,7 @@ package application;
 import entities.Administrador;
 import entities.Empregado;
 import entities.Fornecedor;
+import entities.Operario;
 import entities.Pessoa;
 
 public class Main {
@@ -30,7 +31,9 @@ public class Main {
 		
 		System.out.println(administrador);
 		
-		
+		Operario operario = new Operario("Guto", "Indaiatuba", "7777788888", 12000, 20);
+		operario.setComissao(10);
+		System.out.println(operario);
 
 	}
 
