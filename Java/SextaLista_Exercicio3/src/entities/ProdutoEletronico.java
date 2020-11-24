@@ -8,6 +8,7 @@ public class ProdutoEletronico {
 	private String tipo;
 
 	public ProdutoEletronico() {
+		this.ligado= false;
 	}
 
 	public ProdutoEletronico(String modelo, Boolean ligado, String marca, String tipo) {
@@ -29,7 +30,7 @@ public class ProdutoEletronico {
 		return ligado;
 	}
 
-	public void setLigado(Boolean ligado) {
+	private void setLigado(Boolean ligado) {
 		this.ligado = ligado;
 	}
 
@@ -49,11 +50,27 @@ public class ProdutoEletronico {
 		this.tipo = tipo;
 	}
 
+	public void ligar() {
+		if (!(this.getLigado())) {
+			this.setLigado(true);
+			System.out.println(this.getModelo() + " está ligando.");
+		} else {
+			System.out.println(this.getModelo() + " já está ligado.");
+		}
+	}
+
+	public void desligar() {
+		if (this.getLigado()) {
+			this.setLigado(false);
+			System.out.println(this.getModelo() + " está desligando.");
+		} else {
+			System.out.println(this.getModelo() + " já está desligado.");
+		}
+	}
+
 	public String status() {
-		return "O produto: " + this.getModelo()
-				+"\nMarcar: "+ this.getMarca() 
-				+"\nTipo: " + this.getTipo()
-				+"\nEstá Ligado: "+this.getLigado()+"\n";
+		return "O produto: " + this.getModelo() + "\nMarcar: " + this.getMarca() + "\nTipo: " + this.getTipo()
+				+ "\nEstá Ligado: " + this.getLigado() + "\n";
 	}
 
 }
