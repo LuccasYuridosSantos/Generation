@@ -1,22 +1,22 @@
 package entities;
 
-public class Operario extends Pessoa{
+public class Operario extends Pessoa implements VencimentoBase{
 	private double valorProducao;
 	private double comissao;
-	private double vacimentoBase;
+	private double vencimentoBase;
 	
 	public Operario() {
 		super();
 	}
 
-	public Operario(String name, String endereco, String telefone, double valorProducao, double comissao) {
+	public Operario(String name, String endereco, String telefone, double valorProducao, double comissao, double vencimentoBase) {
 		super(name, endereco, telefone);
 		this.valorProducao = valorProducao;
 		this.comissao = comissao;
-		this.vacimentoBase =(valorProducao*(comissao/100.0));
+		this.vencimentoBase = vencimentoBase;
 	}
 
-	public double getValorProducao() {
+	public double getValorProducao()  {
 		return valorProducao;
 	}
 
@@ -33,21 +33,22 @@ public class Operario extends Pessoa{
 		this.comissao = comissao;
 	}
 	
-	public double getVacimentoBase() {
+	public double getVencimentoBase() {
 		
-		return this.vacimentoBase;
+		return this.vencimentoBase;
 	}
 
-	public void setVacimentoBase(double valorProducao, double comissao) {
+	@Override
+	public void setVencimentoBase(double vencimentoBase, double valorProducao, double comissao) {
 		this.setComissao(comissao);
 		this.setValorProducao(valorProducao);
-		this.vacimentoBase = (this.valorProducao*(this.comissao/100.0));
+		this.vencimentoBase = vencimentoBase+(this.valorProducao*(this.comissao/100.0));
 	}
 
 	@Override
 	public String toString() {
-		return "Operario:"+this.getName() +" valorProducao=R$ " + valorProducao + ", comissao=" + comissao + "%, vacimentoBase=R$"
-				+ vacimentoBase;
+		return "Operario: "+this.getName() +", valorProducao=R$ " + valorProducao + ", comissao=" + comissao + "%, vacimentoBase=R$"
+				+ vencimentoBase;
 	}
 	
 	

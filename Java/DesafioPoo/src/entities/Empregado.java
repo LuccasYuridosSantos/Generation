@@ -46,4 +46,11 @@ public class Empregado extends Pessoa {
 		return calSalario;
 	}
 
+	@Override
+	public String toString() {
+		return "Empregado: "+this.getName()+", codigo Setor = " + codigoSetor + ", salario Base = R$ " + salarioBase + ", possui imposto = " + imposto + "%";
+	}
+	
+	
+
 }

@@ -1,6 +1,6 @@
 package entities;
 
-public class Administrador extends Pessoa{
+public class Administrador extends Pessoa {
 	private double ajudaDeCusto;
 
 	public Administrador() {
@@ -22,8 +22,8 @@ public class Administrador extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Administrador "+ this.getName() +", endereco=" + this.getEndereco() + ", telefone=" + this.getTelefone() +", ajudade de custo = R$ " + this.getAjudaDeCusto();
+		return "Administrador: " + this.getName() + ", endereco=" + this.getEndereco() + ", telefone="
+				+ this.getTelefone() + ", ajudade de custo = R$ " + this.getAjudaDeCusto();
 	}
-	
-	
+
 }

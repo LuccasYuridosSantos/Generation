@@ -29,9 +29,15 @@ public class Fornecedor extends Pessoa {
 	public void setValorDivida(double valorDivida) {
 		this.valorDivida = valorDivida;
 	}
-	
+
 	public double obterSaldo() {
-		return this.getValorCredito()-this.getValorDivida();
+		return this.getValorCredito() - this.getValorDivida();
+	}
+
+	@Override
+	public String toString() {
+		return "Fornecedor: " + this.getName() + ", possui valor de Credito = R$ " + valorCredito + ", valorDivida = R$ "
+				+ valorDivida + ", e saldo = R$ " + this.obterSaldo();
 	}
 
 }
