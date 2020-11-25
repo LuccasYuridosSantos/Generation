@@ -28,7 +28,6 @@ public class Cavalo  extends Animal implements Correr{
 	@Override
 	public void correr() {
 		System.out.println("Correndo como um cavalo");
-		
 	}
 
 	@Override
